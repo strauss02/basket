@@ -16,6 +16,7 @@ class BasketList extends React.Component {
             key={item.id}
             id={item.id}
             item={item.item}
+            quantity={item.quantity}
             handleRemoveItem={this.props.handleRemoveItem}
           />
         )

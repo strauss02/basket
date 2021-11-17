@@ -28,6 +28,7 @@ class BasketListItem extends React.Component {
         />
 
         {this.props.item}
+        {` X${this.props.quantity}`}
       </div>
     )
   }
