@@ -2,12 +2,12 @@ const listData = [
   {
     id: 1,
     item: 'Ginger',
-    quantity: 1,
+    quantity: 0,
   },
   {
     id: 2,
     item: 'Lemon',
-    quantity: 1,
+    quantity: 0,
   },
   {
     id: 3,

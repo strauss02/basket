@@ -24,7 +24,10 @@ class BasketList extends React.Component {
     })
 
     return (
-      <div className="flex flex-col items-center border-2 border-blue-500 w-1/2 ">
+      <div className="flex flex-col items-center  w-1/2 ">
+        <h1 className="border-b-2 w-4/6 border-yellow-500 mb-3">
+          Your Basquette:
+        </h1>
         {listItems}
       </div>
     )

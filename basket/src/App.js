@@ -4,6 +4,7 @@ import BasketList from './components/BasketList'
 import StockList from './components/StockList'
 import listData from './listData'
 import React from 'react'
+import ClearButton from './components/ClearButton'
 
 class App extends React.Component {
   constructor() {
@@ -12,9 +13,15 @@ class App extends React.Component {
       items: listData,
       stockItems: listData,
     }
-    this.handleChange = this.handleChange.bind(this)
     this.handleAddItem = this.handleAddItem.bind(this)
     this.handleRemoveItem = this.handleRemoveItem.bind(this)
+    this.handleClear = this.handleClear.bind(this)
+  }
+
+  handleClear() {
+    this.setState({
+      items: listData,
+    })
   }
 
   handleAddItem(id) {
@@ -55,23 +62,6 @@ class App extends React.Component {
     console.log(this.state)
   }
 
-  handleChange(id) {
-    console.log(id)
-    this.setState((prevState) => {
-      const updatedItems = prevState.items.map((item) => {
-        if (item.id === id) {
-          return {
-            ...item,
-            quantity: 5,
-          }
-        }
-        return item
-      })
-      return {
-        items: updatedItems,
-      }
-    })
-  }
   render() {
     return (
       <div className="App">
@@ -86,6 +76,7 @@ class App extends React.Component {
             handleRemoveItem={this.handleRemoveItem}
           />
         </div>
+        <ClearButton handleClear={this.handleClear} />
       </div>
     )
   }

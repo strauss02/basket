@@ -7,7 +7,7 @@ class Header extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="bg-yellow-600 h-24 align-middle text-5xl font-semibold text-white mb-6">
         <h1> Basquette </h1>
       </div>
     )
