@@ -1,5 +1,4 @@
 import React from 'react'
-import ListItem from './ListItem'
 import StockListItem from './StockListItem'
 
 class StockList extends React.Component {
@@ -8,10 +7,17 @@ class StockList extends React.Component {
   }
 
   render() {
-    const listItems = this.props.items.map((item, i) => (
-      <StockListItem key={i} item={item} />
+    console.log(this.props.stockItems)
+    const listItems = this.props.stockItems.map((item) => (
+      <StockListItem
+        handleAddItem={this.props.handleAddItem}
+        key={item.id}
+        id={item.id}
+        item={item.item}
+      />
     ))
 
+    console.log(this.props.stockItems)
     return (
       <div className="flex flex-col items-center border-2 border-pink-500 w-1/2 ">
         {listItems}

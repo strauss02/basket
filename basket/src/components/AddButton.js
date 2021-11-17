@@ -9,7 +9,7 @@ class AddButton extends React.Component {
   render() {
     return (
       <button
-        onClick={this.onClick}
+        onClick={() => this.props.handleAddItem(this.props.itemId)}
         className="border-gray-500 border-2 rounded-3xl  ml-2 mr-14 pr-2 pl-2 hover:bg-gray-200"
       >
         Add
