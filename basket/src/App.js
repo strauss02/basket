@@ -1,16 +1,15 @@
-import logo from './logo.svg'
 import Header from './components/Header'
 import './App.css'
-import ListItem from './components/ListItem'
-import List from './components/List'
+import BasketList from './components/BasketList'
+import StockList from './components/StockList'
 
 function App() {
   return (
     <div className="App">
       <Header />
       <div className="flex">
-        <List listRole={'stock'} items={['juju', 'lala', 'samba']} />
-        <List listRole={'basket'} items={['ahla']} />
+        <StockList items={['juju', 'lala', 'samba']} />
+        <BasketList items={['ahla']} />
       </div>
     </div>
   )
