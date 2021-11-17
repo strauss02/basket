@@ -10,7 +10,7 @@ function App() {
       <Header />
       <div className="flex">
         <List listRole={'stock'} items={['juju', 'lala', 'samba']} />
-        <List listRole={'basket'} items={['strawberry']} />
+        <List listRole={'basket'} items={['ahla']} />
       </div>
     </div>
   )
