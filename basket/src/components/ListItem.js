@@ -1,6 +1,8 @@
 import React from 'react'
 
 import Button from './Button'
+import RemoveButton from './RemoveButton'
+import AddButton from './AddButton'
 
 class ListItem extends React.Component {
   constructor(props) {
@@ -11,7 +13,7 @@ class ListItem extends React.Component {
     // if listRole === 'basket' => button.type === remove
     return (
       <div className="flex justify-items-start bg-gray-300 rounded-3xl p-1 w-4/5 m-1">
-        <Button listRole={this.props.listRole} />
+        {this.props.listRole === 'stock' ? <AddButton /> : <RemoveButton />}
         {this.props.item}
       </div>
     )

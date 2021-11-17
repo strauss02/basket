@@ -10,7 +10,7 @@ class Button extends React.Component {
   // if listRole === 'basket' => button.type === remove
   render() {
     return (
-      <button className="border-gray-500 border-2 rounded-3xl  ml-2 mr-14 pr-2 pl-2">
+      <button className="border-gray-500 border-2 rounded-3xl  ml-2 mr-14 pr-2 pl-2 hover:bg-gray-200">
         {this.props.listRole === 'stock' ? 'add' : 'remove'}
       </button>
     )
