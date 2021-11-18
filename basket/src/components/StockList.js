@@ -1,0 +1,33 @@
+import React from 'react'
+import StockListItem from './StockListItem'
+
+class StockList extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
+  render() {
+    console.log(this.props.stockItems)
+    const listItems = this.props.stockItems.map((item) => (
+      <StockListItem
+        handleAddItem={this.props.handleAddItem}
+        key={item.id}
+        id={item.id}
+        item={item.item}
+      />
+    ))
+
+    console.log(this.props.stockItems)
+    return (
+      <div className="flex flex-col items-center   w-1/2 ">
+        <h1 className="border-b-2 w-4/6 border-yellow-500 mb-3">
+          {' '}
+          Groceries:{' '}
+        </h1>
+        {listItems}
+      </div>
+    )
+  }
+}
+
+export default StockList
